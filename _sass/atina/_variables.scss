@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/* Base font family */
+$base-font-family: "Fira Sans", sans-serif !default;
+/* Other font families */
+$headline-font-family: $base-font-family !default;
+$monospace-font-family: Menlo, Consolas, Monaco, "Courier New", Courier,
+  monospace !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 16px !default;
+
+/* Colors */
+$base-color: #393e46 !default;
+$text-color: #181c22 !default;
+$accent-color: #00838a !default;
+$background-color: #fff !default;
+$code-background-color: tint($base-color, 95%) !default;
+$border-color: tint($base-color, 80%) !default;
+$overlay-color: $base-color !default;
+
+$link-base-color: #fe2626 !default;
+$link-visited-color: shade($link-base-color, 15%) !default;
+
+/* Syntax highlighting (base16) colors */
+$base00: #1c2023 !default;
+$base01: #393f45 !default;
+$base02: #565e65 !default;
+$base03: #747c84 !default;
+$base04: #adb3ba !default;
+$base05: #c7ccd1 !default;
+$base06: #dfe2e5 !default;
+$base07: #f3f4f5 !default;
+$base08: #c7ae95 !default;
+$base09: #c7c795 !default;
+$base0a: #aec795 !default;
+$base0b: #95c7ae !default;
+$base0c: #95aec7 !default;
+$base0d: #ae95c7 !default;
+$base0e: #c795ae !default;
+$base0f: #c79595 !default;
+
+/* Site image */
+$site-image-width: 50px !default;
+$site-image-height: 50px !default;
+
+/* Spacing unit */
+$spacing-unit: 30px !default;
+
+/* Border radius */
+$border-radius: 0.25em !default;
+
+/* Global transition */
+$global-transition: all 0.4s ease !default;
+
+/* Width of the content area */
+$content-width:    800px !default;
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;
+
+/* Navicon */
+$navicon-width: 1.75em !default;
+$navicon-height: 0.25em !default;
+$navicon-duration: 0.5s !default;
+$navicon-toggled-size: 1 !default;
+$navicon-nav-bg-close: transparent !default;
+$navicon-nav-bg-open: transparent !default;
+$navicon-content-bg: $text-color !default;

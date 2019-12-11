@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Post
+   ========================================================================== */
+
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  font-weight: normal;
+}
+
+.post-list-heading {
+  font-weight: normal;
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+
+  h3 {
+    margin-bottom: $spacing-unit * 0.5;
+  }
+}
+
+.post-link {
+  display: block;
+}
+
+.post-meta {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: $small-font-size;
+  color: tint($text-color, 50%);
+  font-style: italic;
+  margin-top: 0;
+  a {
+    text-decoration: none;
+    color: #404040;
+    &:hover, &:focus {
+      color: #0085a1;
+      text-decoration: underline;
+    }
+  }
+}
+
+.post-content-preview {
+  margin-bottom: $spacing-unit * 0.2;
+  color: tint($text-color, 50%);
+  &:hover {
+    color: $link-base-color;
+    transition: $global-transition;
+  }
+}

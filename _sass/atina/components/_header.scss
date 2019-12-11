@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  height: $spacing-unit * 2.5;
+  position: relative;
+  background-color: shade($background-color, 5%);
+  
+  .site-title {
+    margin: 0;
+    padding: 0 $spacing-unit * 1.2;
+    font-size: $base-font-size * 1.5;
+    line-height: $spacing-unit * 2.5;
+    font-family: $base-font-family;
+    font-weight: 400;
+    float: left;
+  
+    &, &:visited {
+      color: $text-color;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  .site-nav {
+    float: right;
+    margin-right: $spacing-unit * 1.2;
+    line-height: $spacing-unit * 1.5;
+    margin-top: $spacing-unit * 0.5;
+
+    a {
+      margin-left: $spacing-unit * 0.8;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.canvas {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0);
+  transition: $global-transition;
+  background-color: $background-color;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+main {
+  padding: 0 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: $on-large;
+  flex: 1 0 auto;
+}

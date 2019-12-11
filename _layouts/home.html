@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+        <li>
+          {%- assign date_format = site.atina.date_format | default: "%b %-d, %Y" -%}
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              <h3>
+                {{ post.title | escape }}
+              </h3>
+              {% if post.subtitle %}
+                <h4 class="post-subtitle">
+                    {{ post.subtitle }}
+                </h4>
+              {% endif %}
+              <div class="post-content-preview">
+                {% if post.lang == 'en' %}
+                  {{ post.content | strip_html | truncate:300 }}
+                {% else %}
+                  {{ post.content | strip_html | truncate:200 }}
+                {% endif %}
+              </div>
+              <span class="post-meta">{{ post.date | date: date_format }}</span>
+            </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>

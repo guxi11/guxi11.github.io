@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Table
+   ========================================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* For Firefox to horizontally scroll wider tables */
+  word-break: normal;
+  word-break: keep-all;
+}
+
+th,
+td {
+  border-bottom: 1px solid $border-color;
+}
+
+th {
+  padding: 0.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+td {
+  padding: 0.5em;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+

@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Base elements
+   ========================================================================== */
+
+body {
+  background: $background-color;
+  color: $text-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+blockquote,
+q {
+  color: tint($text-color, 40%);
+  font-style: italic;
+
+  cite {
+    font-size: 80%;
+    font-style: normal;
+    font-weight: bold;
+
+    &::before {
+      padding-right: 0.25rem;
+      content: '\2014';
+    }
+  }
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: $monospace-font-family;
+}
+
+kbd {
+  display: inline-block;
+  margin: 0 0.125em;
+  padding: 0.125em 0.5em;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3px;
+  background-color: rgb(247, 247, 247);
+  text-shadow: 0 1px 0 #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25), inset 0 0 0 2px #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headline-font-family;
+  text-rendering: optimizeLegibility; /* enable common ligatures and kerning */
+}
+
+dt {
+  font-weight: bold;
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+dd {
+  margin: 0;
+}
+
+figcaption {
+  margin: 0.5rem 0;
+  font-size: 80%;
+}
+
+a {
+  text-decoration: none;
+
+  &, &:visited {
+    color: tint($link-base-color, 20%);
+  }
+
+  &:hover {
+    color: $link-base-color;
+    transition: $global-transition;
+    text-decoration: underline;
+  }
+}
+
+a.page-link, a.post-link {
+  text-decoration: none;
+
+  &, &:visited {
+    color: $base-color;
+  }
+
+  &:hover {
+    color: $link-base-color;
+    transition: $global-transition;
+  }
+}
