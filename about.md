@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is the blog of [Isanbel](https://github.com/isanbel).
+害，我首先要是厉害的前端工程师，这一页我要慢慢填。
