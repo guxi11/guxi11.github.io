@@ -130,3 +130,9 @@ a.page-link, a.post-link {
     transition: $global-transition;
   }
 }
+
+::selection {
+  color: #fff;
+  text-shadow: none;
+  background: #0085a1;
+}

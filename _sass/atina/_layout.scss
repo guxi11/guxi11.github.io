@@ -31,7 +31,8 @@ main {
 article, .layout {
   margin-left: auto;
   margin-right: auto;
-  width: $on-large;
+  padding: 0 18px;
+  max-width: $on-large;
 }
 
 hr {

@@ -18,13 +18,13 @@ $base-line-height: 16px !default;
 /* Colors */
 $base-color: #393e46 !default;
 $text-color: #181c22 !default;
-$accent-color: #00838a !default;
+$accent-color: #0085a1 !default;
 $background-color: #fff !default;
 $code-background-color: tint($base-color, 95%) !default;
 $border-color: tint($base-color, 80%) !default;
 $overlay-color: $base-color !default;
 
-$link-base-color: #00838a !default;
+$link-base-color: #0085a1 !default;
 $link-visited-color: shade($link-base-color, 15%) !default;
 
 /* Syntax highlighting (base16) colors */
