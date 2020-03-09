@@ -4,8 +4,11 @@
 
 .site-header {
   height: $spacing-unit * 2.5;
-  position: relative;
-  background-color: shade($background-color, 5%);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(255,255,255,0.97);
+  box-shadow: 0 0.3125rem 0.3125rem -0.3125rem rgba(0,0,0,0.117);
   
   .site-title {
     margin: 0;
@@ -16,6 +19,27 @@
     font-weight: 400;
     float: left;
   
+    .logo {
+      position: relative;
+      top: 6px;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      background-color: $text-color;
+      display: inline-block;
+      &::after {
+        content: " ";
+        position: relative;
+        display: block;
+        top: -2px;
+        left: 6px;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 30px;
+      }
+    }
+
     &, &:visited {
       color: $text-color;
     }

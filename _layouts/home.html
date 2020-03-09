@@ -2,27 +2,25 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{%- include masthead.html -%}
+
+<div class="home layout post-preview">
 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
         <li>
           {%- assign date_format = site.atina.date_format | default: "%b %-d, %Y" -%}
             <a class="post-link" href="{{ post.url | relative_url }}">
-              <h3>
+              <h2 class="post-title">
                 {{ post.title | escape }}
-              </h3>
+              </h2>
               {% if post.subtitle %}
-                <h4 class="post-subtitle">
+                <h3 class="post-subtitle">
                     {{ post.subtitle }}
-                </h4>
+                </h3>
               {% endif %}
               <div class="post-content-preview">
                 {% if post.lang == 'en' %}
@@ -34,6 +32,7 @@ layout: default
               <span class="post-meta">{{ post.date | date: date_format }}</span>
             </a>
         </li>
+        <hr>
       {%- endfor -%}
     </ul>
   {%- endif -%}
