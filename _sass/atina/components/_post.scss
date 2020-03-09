@@ -7,7 +7,24 @@
 }
 
 .post-title {
-  font-weight: normal;
+  font-size: 26px;
+  line-height: 1.3;
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+
+.post-subtitle {
+  font-size: 15px;
+  line-height: 1.3;
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.archieve {
+  .post-title {
+    font-size: 16px;
+  }
 }
 
 .post-list-heading {
@@ -27,12 +44,16 @@
   }
 }
 
+.archieve .post-list li {
+  margin-bottom: 0;
+}
+
 .post-link {
   display: block;
 }
 
 .post-meta {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: $base-meta-font-family;
   font-size: $small-font-size;
   color: tint($text-color, 50%);
   font-style: italic;

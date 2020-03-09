@@ -3,11 +3,13 @@
    ========================================================================== */
 
 /* Base font family */
-$base-font-family: "Fira Sans", sans-serif !default;
+$base-font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
 /* Other font families */
 $headline-font-family: $base-font-family !default;
 $monospace-font-family: Menlo, Consolas, Monaco, "Courier New", Courier,
   monospace !default;
+$base-meta-font-family: 'Lora', 'Times New Roman', serif;
+
 $base-font-size: 16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;

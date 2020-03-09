@@ -4,7 +4,7 @@ layout: default
 
 {%- include masthead.html -%}
 
-<div class="layout">
+<div class="archieve layout">
 
   {{ content }}
 
@@ -32,7 +32,7 @@ layout: default
       {%- for post in site.posts -%}
         <li>
           {%- assign date_format = site.atina.date_format | default: "%b %-d, %Y" -%}
-            <h3>
+            <h3 class="post-title">
               <a class="post-link" href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}
               </a>
