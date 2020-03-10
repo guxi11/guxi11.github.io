@@ -83,3 +83,20 @@
     transition: $global-transition;
   }
 }
+
+/* In post content */
+
+.center-container {
+  text-align: center;
+}
+
+img {
+  &.middle {
+    width: 600px;
+  }
+}
+
+.caption {
+  font-size: 14px;
+  color: tint($text-color, 40%);
+}
