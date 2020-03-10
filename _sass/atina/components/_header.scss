@@ -60,3 +60,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .site-header {
+    .site-title {
+      padding: 0 0 0 $spacing-unit * 1;
+    }
+    .site-nav {
+      margin-right: $spacing-unit * 1;
+    }
+  }
+}
