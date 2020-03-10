@@ -92,13 +92,13 @@
 
 img {
   &.middle {
-    width: 600px;
+    max-width: 600px;
   }
   &.middle-height {
-    height: 400px;
+    max-height: 500px;
   }
   &.small {
-    width: 200px;
+    max-width: 200px;
   }
 }
 
