@@ -94,9 +94,22 @@ img {
   &.middle {
     width: 600px;
   }
+  &.middle-height {
+    height: 400px;
+  }
+  &.small {
+    width: 200px;
+  }
 }
 
 .caption {
   font-size: 14px;
   color: tint($text-color, 40%);
+}
+
+article {
+  h1,h2,h3,h4,h5,h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
