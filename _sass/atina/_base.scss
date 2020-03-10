@@ -21,9 +21,16 @@ main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+
 blockquote,
 q {
-  color: tint($text-color, 40%);
+  color: tint($text-color, 50%);
   font-style: italic;
 
   cite {

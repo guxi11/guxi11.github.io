@@ -119,6 +119,16 @@
   }
 }
 
+.listing-seperator {
+  font-size: 20px;
+  font-weight: 200;
+  color: $link-base-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Masthead */
 .masthead .tags {
   position: relative;
 }
