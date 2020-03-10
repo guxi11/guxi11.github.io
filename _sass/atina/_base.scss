@@ -143,3 +143,9 @@ a.page-link, a.post-link {
   text-shadow: none;
   background: #0085a1;
 }
+
+video {
+  &:focus {
+    outline: none;
+  }
+}
