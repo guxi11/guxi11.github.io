@@ -69,18 +69,3 @@ layout: default
     {% endfor %}
   </div>
 </div>
-
-<!-- jQuery -->
-<script src="{{ "/assets/js/jquery.min.js" | prepend: site.baseurl }}"></script>
-<!-- jquery.tagcloud.js -->
-<script src="{{ "/assets/js/jquery.tagcloud.js" | prepend: site.baseurl }}"></script>
-<script>
-(function() {
-  $.fn.tagcloud.defaults = {
-    //size: {start: 1, end: 1, unit: 'em'},
-    color: {start: '#bbbbee', end: '#2f93b4'},
-  };
-  $('#tag_cloud a').tagcloud();
-})();
-</script>
-<script src="{{ "/assets/js/archive.js " | prepend: site.baseurl }}"></script>

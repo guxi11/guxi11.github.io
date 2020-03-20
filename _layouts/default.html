@@ -3,6 +3,8 @@
 
   {%- include head.html -%}
 
+  {%- assign page_ = page -%} <!-- hack: the page will be used one time. -->
+
   <body>
 
     {%- include header.html -%}
@@ -13,7 +15,7 @@
       </div>
     </main>
 
-    {%- include footer.html -%}
+    {%- include footer.html page=page_-%}
 
   </body>
 
