@@ -9,6 +9,7 @@
   .sidebar-container, .catalog-container {
     padding-right: 5%;
     float: right;
+    margin-right: 30px;
   }
 }
 .sidebar-container {
@@ -58,13 +59,13 @@
   overflow: auto;
   height: 100%;
   padding-bottom: 40px;
-  padding-right: 20px;
+  padding-right: 0px;
   width: 195px;
 }
 .side-catalog.fixed {
   position: fixed;
   top: 105px;
-  right: 0px;
+  right: 30px;
 }
 .side-catalog.fold .catalog-toggle::before {
   content: "+";
