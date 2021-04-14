@@ -7,7 +7,7 @@ tags:
   - npm
 ---
 
-Just released a npm package, you can find the source files here: [markable](https://github.com/hbhde/markable).
+Just released a npm package, you can find the source files here: [markable](https://github.com/guxi11/markable).
 
 ## Get started
 
@@ -34,7 +34,7 @@ package.json
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hbhde/markable.git"
+    "url": "git+https://github.com/guxi11/markable.git"
   },
   "keywords": [
     "markdown",
@@ -46,9 +46,9 @@ package.json
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hbhde/markable/issues"
+    "url": "https://github.com/guxi11/markable/issues"
   },
-  "homepage": "https://github.com/hbhde/markable#readme"
+  "homepage": "https://github.com/guxi11/markable#readme"
 }
 
 ```
@@ -78,7 +78,7 @@ npm publish --access=public
 
 Add badge
 
-* heavily inspired by [marked](https://github.com/markedjs/marked) 
+* heavily inspired by [marked](https://github.com/markedjs/marked)
 
   ```md
   [![npm](https://badgen.net/npm/v/marked)](https://www.npmjs.com/package/marked)
@@ -88,11 +88,11 @@ Add badge
 
 * https://shields.io
 
-## Resources
+## References
 
 tutorial
 
-* [tiny](https://juejin.im/post/5c26c1b65188252dcb312ad6) 
+* [tiny](https://juejin.im/post/5c26c1b65188252dcb312ad6)
 
 issues:
 
