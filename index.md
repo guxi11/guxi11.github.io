@@ -4,5 +4,5 @@
 
 layout: home
 title: Guxi11 Blog
-description: 我所想，所行的事
+description: 首页
 ---
