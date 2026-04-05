@@ -12,8 +12,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: $background-color;
-  z-index: 100;
+  background: transparent;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -37,5 +36,5 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-border);
 }

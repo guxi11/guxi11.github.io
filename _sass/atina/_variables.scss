@@ -2,30 +2,28 @@
    Variables
    ========================================================================== */
 
-/* Base font family */
-$base-font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
-/* Other font families */
+/* Base font family - Inter first, then CJK fallbacks */
+$base-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
 $headline-font-family: $base-font-family !default;
-$monospace-font-family: Menlo, Consolas, Monaco, "Courier New", Courier,
-  monospace !default;
-$base-meta-font-family: 'Lora', 'Times New Roman', serif;
+$monospace-font-family: 'JetBrains Mono', Menlo, Consolas, Monaco, "Courier New", Courier, monospace !default;
+$base-meta-font-family: $base-font-family;
 
-$base-font-size: 16px !default;
+$base-font-size: 17px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 16px !default;
+$small-font-size: $base-font-size * 0.875 !default;
+$base-line-height: 17px !default;
 
 /* Colors */
-$base-color: #393e46 !default;
-$text-color: #181c22 !default;
-$accent-color: #0085a1 !default;
-$background-color: #fff !default;
+$base-color: #475569 !default;
+$text-color: #1e293b !default;
+$accent-color: #6366f1 !default;
+$background-color: #fafaf9 !default;
 $code-background-color: tint($base-color, 95%) !default;
-$border-color: tint($base-color, 80%) !default;
-$overlay-color: $base-color !default;
+$border-color: #e2e8f0 !default;
+$overlay-color: $text-color !default;
 
-$link-base-color: #0085a1 !default;
-$link-visited-color: shade($link-base-color, 15%) !default;
+$link-base-color: #6366f1 !default;
+$link-visited-color: shade($link-base-color, 10%) !default;
 
 /* Syntax highlighting (base16) colors */
 $base00: #1c2023 !default;
@@ -53,17 +51,17 @@ $site-image-height: 50px !default;
 $spacing-unit: 30px !default;
 
 /* Border radius */
-$border-radius: 0.25em !default;
+$border-radius: 0.375em !default;
 
 /* Global transition */
-$global-transition: all 0.4s ease !default;
+$global-transition: all 0.25s ease !default;
 
 /* Width of the content area */
-$content-width:    800px !default;
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-$on-medium:        $on-palm !default;
-$on-large:         $on-laptop !default;
+$content-width: 800px !default;
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
+$on-medium: $on-palm !default;
+$on-large: $on-laptop !default;
 
 /* Navicon */
 $navicon-width: 1.75em !default;

@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(bundle exec:*)",
+      "Bash(gem install:*)",
+      "Bash(ruby --version)",
+      "Read(//Users/zyy/.rbenv/shims/**)",
+      "Read(//Users/zyy/.rvm/**)",
+      "Bash(source ~/.zshrc)",
+      "Bash(bundle update:*)",
+      "Bash(gem list:*)",
+      "Bash(gem env:*)",
+      "Read(//Users/zyy/.rbenv/**)",
+      "Read(//opt/homebrew/opt/**)",
+      "Read(//usr/local/**)",
+      "Bash(export PATH=\"$HOME/.gem/ruby/2.6.0/bin:$PATH\")",
+      "Bash(bundle install:*)",
+      "Bash(command -v ruby3)",
+      "Bash(brew list:*)",
+      "Bash(brew --prefix ruby)",
+      "Bash(brew install:*)",
+      "Bash(export PATH=\"/opt/homebrew/opt/ruby/bin:$PATH\")",
+      "Bash(export PATH=\"/opt/homebrew/opt/ruby@3.3/bin:$PATH\")"
+    ]
+  }
+}

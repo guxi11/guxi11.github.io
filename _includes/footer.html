@@ -18,82 +18,86 @@
 
 {%- assign page = include.page -%}
 
-<!-- jQuery -->
-<script src="{{ "/assets/js/jquery.min.js" | prepend: site.baseurl }}"></script>
-
 {% if page.title == 'Archive' %}
-<!-- jquery.tagcloud.js -->
-<script src="{{ "/assets/js/jquery.tagcloud.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/archive.js" | prepend: site.baseurl }}"></script>
 <script>
-  (function() {
-    $.fn.tagcloud.defaults = {
-      //size: {start: 1, end: 1, unit: 'em'},
-      color: {start: '#bbbbee', end: '#2f93b4'},
-    };
-    $('#tag_cloud a').tagcloud();
-  })();
+(function() {
+  var tags = document.querySelectorAll('#tag_cloud a[rel]');
+  if (!tags.length) return;
+  var counts = Array.from(tags).map(function(a) { return parseInt(a.getAttribute('rel')) || 1; });
+  var min = Math.min.apply(null, counts);
+  var max = Math.max.apply(null, counts);
+  tags.forEach(function(a, i) {
+    var pct = max === min ? 0.5 : (counts[i] - min) / (max - min);
+    a.style.fontSize = (0.8 + pct * 0.55) + 'em';
+  });
+})();
 </script>
-<script src="{{ "/assets/js/archive.js " | prepend: site.baseurl }}"></script>
 {% endif %}
 
-<!-- Side Catalog -->
 {% if page.catalog %}
-<script type="text/javascript">
-    function generateCatalog (selector) {
-
-        // interop with multilangual 
-        if ('{{ page.multilingual }}' == 'true') {
-            _containerSelector = 'div.post-content.active'
-        } else {
-            _containerSelector = 'div.post-content'
-        }
-
-        // init
-        var P = $(_containerSelector),a,n,t,l,i,c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-
-        // clean
-        $(selector).html('')
-
-        // appending
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#"+$(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
-            l = $('<li class="'+n+'_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;
-    }
-
-    generateCatalog(".catalog-body");
-
-    // toggle side catalog
-    $(".catalog-toggle").click((function(e){
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    
-</script>
-
-<script src="{{ "/assets/js/jquery.nav.js" | prepend: site.baseurl }}"></script>
 <script>
-  (function() {
-    $('.catalog-body').onePageNav({
-      currentClass: "active",
-      changeHash: !1,
-      easing: "swing",
-      filter: "",
-      scrollSpeed: 700,
-      scrollOffset: 0,
-      scrollThreshold: .2,
-      begin: null,
-      end: null,
-      scrollChange: null,
-      padding: 80
+(function() {
+  function generateCatalog(selector) {
+    var containerSel = '{{ page.multilingual }}' === 'true'
+      ? 'div.post-content.active'
+      : 'div.post-content';
+    var container = document.querySelector(containerSel);
+    var list = document.querySelector(selector);
+    if (!container || !list) return;
+
+    list.innerHTML = '';
+    container.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function(h) {
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.rel = 'nofollow';
+      a.textContent = h.textContent;
+      var li = document.createElement('li');
+      li.className = h.tagName.toLowerCase() + '_nav';
+      li.appendChild(a);
+      list.appendChild(li);
     });
-  })();
+  }
+
+  generateCatalog('.catalog-body');
+
+  var toggle = document.querySelector('.catalog-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var catalog = document.querySelector('.side-catalog');
+      if (catalog) catalog.classList.toggle('fold');
+    });
+  }
+
+  // IntersectionObserver for active TOC link
+  var links = Array.from(document.querySelectorAll('.catalog-body a'));
+  if (links.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = '#' + entry.target.id;
+          links.forEach(function(a) {
+            a.parentElement.classList.toggle('active', a.getAttribute('href') === id);
+          });
+        }
+      });
+    }, { rootMargin: '-10% 0px -75% 0px' });
+
+    document.querySelectorAll('div.post-content h1,div.post-content h2,div.post-content h3,div.post-content h4,div.post-content h5,div.post-content h6').forEach(function(h) {
+      if (h.id) observer.observe(h);
+    });
+  }
+
+  // Sticky catalog on scroll
+  var catalog = document.querySelector('.side-catalog');
+  if (catalog && window.innerWidth >= 1200) {
+    var masthead = document.querySelector('.masthead');
+    var threshold = (masthead ? masthead.offsetHeight : 200) + 41;
+    window.addEventListener('scroll', function() {
+      catalog.classList.toggle('fixed', window.scrollY > threshold);
+    }, { passive: true });
+  }
+})();
 </script>
 {% endif %}
