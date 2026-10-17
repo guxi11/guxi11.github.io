@@ -6,6 +6,8 @@ layout: default
 
 <div class="archieve layout">
 
+  <p>共 {{ site.posts.size }} 篇文章。原文与历史链接均保留。</p>
+
   <div id="tag_cloud" class="tags tags-sup site-tags js-tags">
     <a class="tag-button--all" data-encode="">
       Show All
@@ -26,7 +28,7 @@ layout: default
   </div>
 
   <!-- Article List -->
-  <div class="mini-post-list js-result d-none">
+  <div class="mini-post-list js-result">
     {%- assign _sorted_list = site.posts -%}
     {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
     {%- assign _sorted_list = _sorted_list | reverse -%}
@@ -67,5 +69,6 @@ layout: default
         <hr>
       </div>
     {% endfor %}
+    {%- if site.posts.size > 0 -%}</section>{%- endif -%}
   </div>
 </div>

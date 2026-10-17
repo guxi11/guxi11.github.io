@@ -4,36 +4,6 @@ layout: default
 
 {%- include masthead.html -%}
 
-<div class="home layout post-preview">
-
+<div class="home layout">
   {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-        <li>
-          {%- assign date_format = site.atina.date_format | default: "%b %-d, %Y" -%}
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              <h2 class="post-title">
-                {{ post.title | escape }}
-              </h2>
-              {% if post.subtitle %}
-                <h3 class="post-subtitle">
-                    {{ post.subtitle }}
-                </h3>
-              {% endif %}
-              <div class="post-content-preview">
-                {% if post.lang == 'en' %}
-                  {{ post.content | strip_html | truncate:300 }}
-                {% else %}
-                  {{ post.content | strip_html | truncate:200 }}
-                {% endif %}
-              </div>
-              <span class="post-meta">{{ post.date | date: date_format }}</span>
-            </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-
 </div>
