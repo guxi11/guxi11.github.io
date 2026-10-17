@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f3e9">
   <meta name="description" content="把分散在多个 AI agent 的规则、技能与外部资源，整理成自己的工作牌组。modeck 集中管理个人与团队配置，按项目组合，在会话启动时加载合适的上下文。">
-  <meta property="og:title" content="modeck — 好的工作方式，随项目就位。">
-  <meta property="og:description" content="集中管理 rules、skills 与外部资源，让个人和团队的工作方式在多个 AI agent 之间复用。">
+  <meta property="og:title" content="modeck — 好的工作模式，随项目就位。">
+  <meta property="og:description" content="集中管理 rules、skills 与外部资源，让个人和团队的工作模式在多个 AI agent 之间复用。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://guxi11.com/modeck/">
-  <title>modeck — 好的工作方式，随项目就位。</title>
+  <title>modeck — 好的工作模式，随项目就位。</title>
   <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
   <link rel="canonical" href="https://guxi11.com/modeck/">
   <link rel="stylesheet" href="./styles.css">
@@ -20,7 +20,7 @@
   <header class="site-header wrap">
     <a class="brand" href="#" aria-label="modeck 首页"><img src="./assets/logo.svg" width="780" height="276" alt="modeck"></a>
     <nav aria-label="主导航">
-      <a href="#approach">工作方式</a>
+      <a href="#approach">工作模式</a>
       <a href="#compose">组合模式</a>
       <a class="nav-github" href="https://github.com/guxi11/modeck">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
@@ -30,8 +30,8 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✳</span> A LITTLE ORDER FOR YOUR AGENTS</p>
-        <h1 id="hero-title">好的工作方式，<br>随项目<span class="hand-underline">就位。</span></h1>
+        <p class="eyebrow"><span class="tiny-star" aria-hidden="true"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></svg></span> A LITTLE ORDER FOR YOUR AGENTS</p>
+        <h1 id="hero-title">好的工作模式，<br>随项目<span class="hand-underline">就位。</span></h1>
         <p class="hero-description">规则在这里，技能在那里。换个 agent、换个项目，又要整理一遍。</p>
         <p class="hero-value">把 rules、skills 和外部资源收进一副牌组。<br class="desktop-break">由 modeck 集中管理，按项目组合，在会话启动时加载。</p>
         <div class="hero-actions">
@@ -54,7 +54,7 @@
     <div class="agent-strip wrap">
       <p>不同的 agent，同一套工作习惯</p>
       <ul aria-label="当前支持的 agent">
-        <li><span class="agent-mark claude-mark" aria-hidden="true">✳</span> Claude Code</li>
+        <li><span class="agent-mark claude-mark" aria-hidden="true"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></svg></span> Claude Code</li>
         <li><span class="agent-mark codex-mark" aria-hidden="true">⌘</span> Codex CLI</li>
         <li><span class="agent-mark buddy-mark" aria-hidden="true">&gt;_</span> CodeBuddy Code CLI</li>
       </ul>
@@ -64,7 +64,7 @@
       <div class="section-heading">
         <p class="eyebrow">01 / FROM SCATTERED TO COMPOSED</p>
         <h2 id="approach-title">少一点重复整理，<br>多一点顺手开工。</h2>
-        <p>你积累的规则和技能，应该跟着工作方式走。<br>不必在每个 agent、每个项目里重新维护一份。</p>
+        <p>你积累的规则和技能，应该跟着工作模式走。<br>不必在每个 agent、每个项目里重新维护一份。</p>
       </div>
       <div class="comparison">
         <div class="before">
@@ -95,7 +95,7 @@
       <div class="wrap">
         <div class="compose-heading">
           <div><p class="eyebrow">02 / BUILD YOUR WORKING DECK</p><h2 id="compose-title">不是每张牌，<br>每次都要上场。</h2></div>
-          <div class="compose-intro"><p>编程时带上代码规范，写文档时加入表达习惯。<br>同一项目，也可以同时需要几种工作方式。</p><p class="interaction-hint"><span aria-hidden="true">↙</span> 点选卡片，试试组合你的工作模式</p></div>
+          <div class="compose-intro"><p>编程时带上代码规范，写文档时加入表达习惯。<br>同一项目，也可以同时需要几种工作模式。</p><p class="interaction-hint"><span aria-hidden="true">↙</span> 点选卡片，试试组合你的工作模式</p></div>
         </div>
         <div class="workbench">
           <div class="mode-cards" role="group" aria-label="工作模式组合示意，可选择多个模式">
@@ -122,7 +122,7 @@
             <p class="preview-footer">默认规则始终加载，技能内容在需要时读取。</p>
           </div>
         </div>
-        <div class="compose-note"><span class="note-star" aria-hidden="true">✳</span><p>上面是自定义模式的示意，并非内置模板。在项目的 <code>.modes</code> 中固定组合，或自行编写 <code>modeck-auto.mjs</code>，根据目录、文件与依赖自动选择；初始化的自动脚本默认不选额外模式。</p></div>
+        <div class="compose-note"><span class="note-star" aria-hidden="true"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></svg></span><p>上面是自定义模式的示意，并非内置模板。在项目的 <code>.modes</code> 中固定组合，或自行编写 <code>modeck-auto.mjs</code>，根据目录、文件与依赖自动选择；初始化的自动脚本默认不选额外模式。</p></div>
         <noscript><p class="noscript-note">开启 JavaScript 后可交互选择模式；当前展示 prog 编程模式。</p></noscript>
       </div>
     </section>
@@ -139,12 +139,8 @@
 
     <section class="start-section" id="start" aria-labelledby="start-title">
       <div class="wrap">
-        <div class="start-heading"><div><p class="eyebrow">04 / DEAL YOUR FIRST DECK</p><h2 id="start-title">下一次开工，<br>从一副好牌开始。</h2></div><p>当前从源码安装，支持 macOS / Linux。<br>准备 Git、Node.js 22.20.0+ 与所需 agent CLI。</p></div>
-        <div class="install-command"><span class="command-prefix" aria-hidden="true">$</span><code id="install-command">git clone https://github.com/guxi11/modeck.git
-cd modeck
-npm ci
-npm run build
-npm install -g .</code><button type="button" class="copy-button" id="copy-install" aria-label="复制完整源码安装命令">复制命令 <span aria-hidden="true">⧉</span></button></div>
+        <div class="start-heading"><div><p class="eyebrow">04 / DEAL YOUR FIRST DECK</p><h2 id="start-title">下一次开工，<br>从一副好牌开始。</h2></div><p>通过 npm 安装 modeck，支持 macOS / Linux。<br>准备 Node.js 22.20.0+ 与所需 agent CLI。</p></div>
+        <div class="install-command"><span class="command-prefix" aria-hidden="true">$</span><code id="install-command">npm install -g modeck@0.1.1</code><button type="button" class="copy-button" id="copy-install" aria-label="复制 npm 安装命令">复制命令 <span aria-hidden="true">⧉</span></button></div>
         <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
         <ol class="start-steps">
           <li><span class="step-number">01</span><h3>初始化配置</h3><p>创建并进入自己的配置目录，<br>按引导选择 agent、导入资源。</p><code>modeck init</code></li>
@@ -156,6 +152,6 @@ npm install -g .</code><button type="button" class="copy-button" id="copy-instal
     </section>
   </main>
 
-  <footer class="site-footer wrap"><a class="footer-brand" href="#" aria-label="回到 modeck 首页"><img src="./assets/logo.svg" width="780" height="276" alt="modeck"></a><p>你的工作方式，值得一副好牌。</p><a href="https://github.com/guxi11/modeck">Built in the open <span aria-hidden="true">↗</span></a></footer>
+  <footer class="site-footer wrap"><a class="footer-brand" href="#" aria-label="回到 modeck 首页"><img src="./assets/logo.svg" width="780" height="276" alt="modeck"></a><p>你的工作模式，值得一副好牌。</p><a href="https://github.com/guxi11/modeck">Built in the open <span aria-hidden="true">↗</span></a></footer>
 </body>
 </html>
