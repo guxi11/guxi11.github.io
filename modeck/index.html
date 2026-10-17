@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3e9">
+  <meta name="description" content="把分散在多个 AI agent 的规则、技能与外部资源，整理成自己的工作牌组。modeck 集中管理个人与团队配置，按项目组合，在会话启动时加载合适的上下文。">
+  <meta property="og:title" content="modeck — 好的工作模式，随项目就位。">
+  <meta property="og:description" content="集中管理 rules、skills 与外部资源，让个人和团队的工作模式在多个 AI agent 之间复用。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://guxi11.com/modeck/">
+  <title>modeck — 好的工作模式，随项目就位。</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+  <link rel="canonical" href="https://guxi11.com/modeck/">
+  <link rel="stylesheet" href="./styles.css?v=0.1.1">
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="modeck 首页"><img src="./assets/logo.svg" width="780" height="276" alt="modeck"></a>
+    <nav aria-label="主导航">
+      <a href="#approach">工作模式</a>
+      <a href="#compose">组合模式</a>
+      <a class="nav-github" href="https://github.com/guxi11/modeck">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <a class="header-cta" href="#start">开始使用 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-star" aria-hidden="true"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></svg></span> A LITTLE ORDER FOR YOUR AGENTS</p>
+        <h1 id="hero-title">好的工作模式，<br>随项目<span class="hand-underline">就位。</span></h1>
+        <p class="hero-description">规则在这里，技能在那里。换个 agent、换个项目，又要整理一遍。</p>
+        <p class="hero-value">把 rules、skills 和外部资源收进一副牌组。<br class="desktop-break">由 modeck 集中管理，按项目组合，在会话启动时加载。</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#start">开始使用 <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#compose">看看如何组合 <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="hero-footnote">本地配置 · 多套方案 · 你熟悉的 agent CLI</p>
+      </div>
+      <div class="hero-art" aria-label="prog、doc、research 三张工作模式卡片">
+        <div class="art-circle" aria-hidden="true"></div>
+        <div class="art-orbit" aria-hidden="true"></div>
+        <p class="art-caption">LESS SETUP.<br><span>MORE FLOW.</span></p>
+        <img class="deck-art" src="./assets/icon.svg" width="328" height="260" alt="鼠尾草绿的 prog、象牙白的 doc 与陶土红的 research，扇形展开的三张工作模式卡片">
+        <span class="art-cross cross-one" aria-hidden="true">+</span><span class="art-cross cross-two" aria-hidden="true">+</span>
+        <div class="art-label"><span class="label-dot" aria-hidden="true"></span> YOUR MODES, IN ONE DECK <span aria-hidden="true">↗</span></div>
+        <span class="art-number" aria-hidden="true">FIG. 01 / THE WORKING DECK</span>
+      </div>
+    </section>
+
+    <div class="agent-strip wrap">
+      <p>不同的 agent，同一套工作习惯</p>
+      <ul aria-label="当前支持的 agent">
+        <li><span class="agent-mark claude-mark" aria-hidden="true"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></svg></span> Claude Code</li>
+        <li><span class="agent-mark codex-mark" aria-hidden="true">⌘</span> Codex CLI</li>
+        <li><span class="agent-mark buddy-mark" aria-hidden="true">&gt;_</span> CodeBuddy Code CLI</li>
+      </ul>
+    </div>
+
+    <section class="approach section wrap" id="approach" aria-labelledby="approach-title">
+      <div class="section-heading">
+        <p class="eyebrow">01 / FROM SCATTERED TO COMPOSED</p>
+        <h2 id="approach-title">少一点重复整理，<br>多一点顺手开工。</h2>
+        <p>你积累的规则和技能，应该跟着工作模式走。<br>不必在每个 agent、每个项目里重新维护一份。</p>
+      </div>
+      <div class="comparison">
+        <div class="before">
+          <p class="diagram-label">BEFORE <span>分散维护</span></p>
+          <div class="scattered-resources" aria-label="多个 agent 的全局与项目配置分散维护">
+            <div class="resource-slip slip-one"><span>Claude Code / 全局</span><strong>rules &amp; skills</strong></div>
+            <div class="resource-slip slip-two"><span>Codex / 项目 A</span><strong>rules &amp; skills</strong></div>
+            <div class="resource-slip slip-three"><span>Claude Code / 项目 B</span><strong>rules &amp; skills</strong></div>
+          </div>
+          <p class="diagram-note">相似的内容，不同的入口。<br>项目一换，再复制、再检查。</p>
+        </div>
+        <div class="comparison-arrow" aria-hidden="true">→</div>
+        <div class="after">
+          <p class="diagram-label">WITH MODECK <span>集中组织，按需组合</span></p>
+          <div class="organized-resources">
+            <div class="source-tags"><span>个人配置</span><span>团队配置</span><span>外部 Git 资源</span></div>
+            <div class="connector" aria-hidden="true">↓</div>
+            <div class="deck-box"><span aria-hidden="true">▱</span><strong>modeck</strong><span>rules + skills + modes</span></div>
+            <div class="connector" aria-hidden="true">↓</div>
+            <p class="output-label">项目上下文 <span>→</span> 所选 agent 会话</p>
+          </div>
+          <p class="diagram-note">规则正文 + 按需读取的技能索引，<br>在会话启动时就位。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="compose-section" id="compose" aria-labelledby="compose-title">
+      <div class="wrap">
+        <div class="compose-heading">
+          <div><p class="eyebrow">02 / BUILD YOUR WORKING DECK</p><h2 id="compose-title">不是每张牌，<br>每次都要上场。</h2></div>
+          <div class="compose-intro"><p>编程时带上代码规范，写文档时加入表达习惯。<br>同一项目，也可以同时需要几种工作模式。</p><p class="interaction-hint"><span aria-hidden="true">↙</span> 点选卡片，试试组合你的工作模式</p></div>
+        </div>
+        <div class="workbench">
+          <div class="mode-cards" role="group" aria-label="工作模式组合示意，可选择多个模式">
+            <button class="mode-card mode-prog is-selected" type="button" data-mode="prog" aria-pressed="true">
+              <span class="card-top"><span>01 / CODE</span><span class="card-check" aria-hidden="true">✓</span></span>
+              <span class="card-name">prog</span><span class="card-symbol code-symbol" aria-hidden="true">&lt;/&gt;</span>
+              <span class="card-description">写代码，有章可循。</span><span class="card-bottom">编程模式 <span aria-hidden="true">↗</span></span>
+            </button>
+            <button class="mode-card mode-doc" type="button" data-mode="doc" aria-pressed="false">
+              <span class="card-top"><span>02 / WRITE</span><span class="card-check" aria-hidden="true">+</span></span>
+              <span class="card-name">doc</span><span class="card-symbol doc-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              <span class="card-description">让表达，始终如一。</span><span class="card-bottom">文档模式 <span aria-hidden="true">↗</span></span>
+            </button>
+            <button class="mode-card mode-research" type="button" data-mode="research" aria-pressed="false">
+              <span class="card-top"><span>03 / EXPLORE</span><span class="card-check" aria-hidden="true">+</span></span>
+              <span class="card-name">research</span><span class="card-symbol research-symbol" aria-hidden="true"><i></i><i></i><b></b></span>
+              <span class="card-description">带着方法，寻找答案。</span><span class="card-bottom">研究模式 <span aria-hidden="true">↗</span></span>
+            </button>
+          </div>
+          <div class="context-preview" aria-live="polite" aria-atomic="true">
+            <div class="preview-header"><span>本次组合</span><span class="preview-status">交互示意 · 不执行命令</span></div>
+            <p class="mode-line"><span>.modes</span> <code id="mode-selection">prog</code></p>
+            <div class="preview-content"><div><span class="preview-label">RULES / 规则正文</span><p id="preview-rules">通用协作原则、代码规范</p></div><div><span class="preview-label">SKILLS / 技能索引</span><p id="preview-skills">代码审查</p></div></div>
+            <p class="preview-footer">默认规则始终加载，技能内容在需要时读取。</p>
+          </div>
+        </div>
+        <div class="compose-note"><span class="note-star" aria-hidden="true"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></svg></span><p>上面是自定义模式的示意，并非内置模板。在项目的 <code>.modes</code> 中固定组合，或自行编写 <code>modeck-auto.mjs</code>，根据目录、文件与依赖自动选择；初始化的自动脚本默认不选额外模式。</p></div>
+        <noscript><p class="noscript-note">开启 JavaScript 后可交互选择模式；当前展示 prog 编程模式。</p></noscript>
+      </div>
+    </section>
+
+    <section class="capabilities section wrap" aria-labelledby="capabilities-title">
+      <div class="capabilities-heading"><p class="eyebrow">03 / A PLACE FOR WHAT YOU KNOW</p><h2 id="capabilities-title">把积累留下来，<br>让配置复用起来。</h2></div>
+      <div class="capability-grid">
+        <article class="capability"><span class="feature-number">I.</span><h3>规则、技能，各归其位。</h3><p>rules 保留你的约定，skills 收好可复用的方法。本地文件与外部 Git 资源，在一份配置里组织，继续保留清晰的资源分类。</p><div class="feature-bottom"><span>rules/</span><span>skills/</span><span>Git ↗</span></div></article>
+        <article class="capability"><span class="feature-number">II.</span><h3>个人一套，团队也一套。</h3><p>注册多份配置，选择当前启用的集合。个人习惯与团队规范分别维护、共同组合，绑定的 agent 共用所选配置集合。</p><div class="feature-bottom"><span class="mini-dot sage-dot" aria-hidden="true"></span>个人配置 <span class="plus-sign">+</span><span class="mini-dot clay-dot" aria-hidden="true"></span>团队配置</div></article>
+        <article class="capability"><span class="feature-number">III.</span><h3>外部资源，也有据可循。</h3><p>用 <code>modeck res init</code> 安装声明的资源，以锁文件记录版本。共享配置与锁文件，让另一台机器恢复相同版本；会话启动时不偷偷下载。</p><div class="feature-bottom"><span>声明</span><span aria-hidden="true">→</span><span>安装</span><span aria-hidden="true">→</span><span>锁定版本</span></div></article>
+      </div>
+      <p class="integration-note">通过原生 SessionStart hook 接入现有工作流。绑定时由 Rulesync 转换 hook 配置，并保留已有 hook；规则与技能由 modeck 组织和加载。</p>
+    </section>
+
+    <section class="start-section" id="start" aria-labelledby="start-title">
+      <div class="wrap">
+        <div class="start-heading"><div><p class="eyebrow">04 / DEAL YOUR FIRST DECK</p><h2 id="start-title">下一次开工，<br>从一副好牌开始。</h2></div><p>通过 npm 安装 modeck，支持 macOS / Linux。<br>准备 Node.js 22.20.0+ 与所需 agent CLI。</p></div>
+        <div class="install-command"><span class="command-prefix" aria-hidden="true">$</span><code id="install-command">npm install -g modeck</code><button type="button" class="copy-button" id="copy-install" aria-label="复制 npm 安装命令">复制命令 <span aria-hidden="true">⧉</span></button></div>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+        <ol class="start-steps">
+          <li><span class="step-number">01</span><h3>初始化配置</h3><p>创建并进入自己的配置目录，<br>按引导选择 agent、导入资源。</p><code>modeck init</code></li>
+          <li><span class="step-number">02</span><h3>注册这副牌组</h3><p>在同一配置目录注册。<br>个人与团队配置都可以加入。</p><code>modeck register</code></li>
+          <li><span class="step-number">03</span><h3>选择配置与 agent</h3><p>选择启用的配置、绑定 agent。<br>然后进入业务项目，启动 agent。</p><code>modeck config</code></li>
+        </ol>
+        <div class="start-bottom"><p>使用 Codex 时，还需在 <code>/hooks</code> 中审查并信任安装的定义。<br>配置变化后，重新启动会话以加载新的上下文。</p><a class="button button-light" href="https://github.com/guxi11/modeck#readme">阅读完整使用说明 <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="footer-brand" href="#" aria-label="回到 modeck 首页"><img src="./assets/logo.svg" width="780" height="276" alt="modeck"></a><p>你的工作模式，值得一副好牌。</p><a href="https://github.com/guxi11/modeck">Built in the open <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>
